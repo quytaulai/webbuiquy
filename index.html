@@ -4,64 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <style>
-        body,html{
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        .backgroud{
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-image: url("z5485821024851_f6e3c3b16152190c08b8e4d3b74b8066.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+}
+
+/* Khi kích thước màn hình nhỏ hơn hoặc bằng 500px */
+@media only screen and (max-width: 500px) {
+    /* Thêm các kiểu CSS mới ở đây */
+    .header{
             background-image: url("z5485821024851_f6e3c3b16152190c08b8e4d3b74b8066.png");
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
-            height: 300px;
+            height: 260px;
             top: 0;
-            
-        }
-        .header__p{
-            font-family: "Allura", cursive;
-            font-style: normal;
-            font-weight: 500;
-            position: relative;
-        }
-        .img1{
-            width: 20%;
-            height: 20%;
-            top: -115px;
-            left: -10px;
-            position: relative;
-            
-        }
-        p{
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .img2{
-            right: 0;
-        }
-        .header__h4{
-            font-family: "Allura", cursive;
-            font-weight: 400;
-            font-style: normal;
+    .header__traitim{
+       
             position: relative;
-            left: 174px;
-            top: -100px;
-            color: brown;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            transform: rotate(-45deg);
+            box-shadow: 0 10px 20px rgba(221, 193, 193, 0.2);
+        
+    }
+        .header__traitim::before,
+        .header__traitim::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow:  10px 0 0 0 rgba(246, 242, 242, 0.2);
+        } 
+
+         .header__traitim::before {
+            top: -50px;
+            left: 0px;
+            
         }
+
+        .header__traitim::after {
+            left: 50px;
+            top: 0px;
+            
+        }
+        .header__name{
+            transform: rotate(0deg);
+            position: relative;
+            /* left: -80px; */
+            left: 119px;
+            top: -170px;
+            animation-duration: 3s;
+            animation-name: grow3;
+        }
+        .header__nameafter{
+            transform: rotate(0);
+            position: relative;
+            /* top: -20%;
+            left: -500px; */
+            top: -170px;
+            left: 128px;
+            animation-duration: 3s;
+            animation-name: grow1;
+            
+        }
+        .header__giua-att{
+            display: flex;
+            position: relative;
+        }
+        .header__and{
+            transform: rotate(0);
+            position: relative;
+            /* top: -500px; */
+            top: -170px;
+            left: 124px;
+            animation-duration: 3s;
+            animation-name: grow;
+        }
+        @keyframes grow1 {
+            from {
+                top: -170px;
+                left: 500px;
+            }
+            to {
+                top: -170px;
+                left: 128px;
+            }
+        }
+        @keyframes grow {
+            from {
+                top: -500px;
+                left: -126px;
+            }
+            to {
+                top: -170px;
+                left: 124px;
+            }
+        }
+        @keyframes grow3 {
+            from {
+                top: -170px;
+                left: -500px;
+            }
+            to {
+                left: 119px;
+                top: -170px;
+            }
+        }
+    }
+
+
+/* Khi kích thước màn hình nhỏ hơn hoặc bằng 768px */
+@media only screen and (min-width: 768px) {
+    /* Thêm các kiểu CSS mới ở đây */
+
+}
+
     </style>
 </head>
-
 <body>
-    <div class="backgroud">
-        <img class="img1" src="snapedit_1716909390933.png" alt="">
-        <img class="img2" src="snapedit_1716909485508.png" alt="">
-        <p class="header__p">Phú and Quý </p>
-        <h4 class="header__h4">21/09/2024</h4>
-    
-</div>
+    <div class="app">
+        <div class="header">
+            <div class="header__giua">
+                <div class="header__traitim"></div>
+               
+            </div>
+            
+        </div>
+        <div class="header__giua-att">
+            <div class="header__name">Đình Phú</div>
+            <div class="header__and">&</div>
+            <div class="header__nameafter">Thị Ngọc</div>
+        </div>
+        
+    </div>
 </body>
 </html>
